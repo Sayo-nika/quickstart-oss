@@ -21,6 +21,9 @@ install:
     # now this is where it gets interesting
     # we're copying over the template files into the renpy SDK
     # and CD into the renpy
+    
+    - mkdir travis_mod
+    
     - cp -vRf quickstart-travis/DDLCModTemplate/* travis_mod/
 
     - cd renpy
