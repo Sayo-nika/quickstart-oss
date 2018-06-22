@@ -1,3 +1,3 @@
-[submodule "DDLCModTemplate"]
-	path = DDLCModTemplate
-	url = https://github.com/Monika-After-Story/DDLCModTemplate
+[submodule "sample_mod"]
+	path = sample_mod
+	url = https://github.com/TheAngelReturns/the-angel-returns
