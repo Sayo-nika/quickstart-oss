@@ -14,6 +14,8 @@ Take a look at `.travis.yml` to let you know on how to build mods with it!
 
 ## Copyright
 
-DDLCModTemplate is from the Monika After Story Developers. The travis build script has been modified for use from Monika After Story repository.
-All rights reserved.
+The travis build script has been modified for use from Monika After Story repository. All rights reserved.
+
+We used the amazing [Doki Doki: The Angel Returns](https://github.com/TheAngelReturns/the-angel-returns) mod as our sample mod. Shoutout to their amazing devs.
+
 
