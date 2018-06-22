@@ -14,18 +14,16 @@ install:
     - tar xf renpy-6.99.12.4-sdk.tar.bz2
     - rm renpy-6.99.12.4-sdk.tar.bz2
     - mv renpy-6.99.12.4-sdk renpy
-    - wget https://s3-us-west-2.amazonaws.com/monika-after-story/ddlc/mas.zip # atm we'll use MAS's DDLC base
 
     # now this is where it gets interesting
     # we're copying over the template files into the renpy SDK
     # and CD into the renpy
     
-    - mkdir mod
-    - unzip mas.zip -d mod
+    - mkdir mod/game
+    - unzip ddlc_files.zip -d mod/game
     
     # Remove README.html to prevent errors.
     - rm -rf travis-quickstart/sample_mod/README.html && cp -vRf quickstart-travis/sample_mod/* mod/
-    - rm -rf mod/chess.rpyc
 
 
 env:
