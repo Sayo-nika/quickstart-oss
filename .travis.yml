@@ -23,7 +23,8 @@ install:
     - mkdir mod
     - unzip mas.zip -d mod
     
-    - /bin/cp -vRf quickstart-travis/sample_mod/* mod/*
+    # Remove README.html to prevent errors.
+    - rm -rf mod/renpy/README.html && cp -vRf quickstart-travis/sample_mod/* mod/*
 
 
 env:
