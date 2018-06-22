@@ -1,28 +1,44 @@
 #!/bin/bash
 
-cwd = "$HOME/build/"
-date= `date '+%Y%m%d'Z`
-auth = "AWS4-HMAC-SHA256 Credential=29fc312082d26720ceeec6e89630f6d2fc382a96c7a72b1c/$date/us-standard/s3/aws4_request,SignedHeaders=host;x-amz-date; Signature=d23d3c27273e2fbac6caf3da2068d5118caa930e85ebe33ac44c06d1529bcb1d"
+# config for mc
+# If you have your own base files, kindly edit this
+# However, if you prefer our base files, that's okay too!
+
+mc_endpoint="https://s3-api.us-geo.objectstorage.softlayer.net"
+mc_hmac_key="aa1d6f56b97443c185d7282c22adc4a7"
+mc_hmac_secret="29fc312082d26720ceeec6e89630f6d2fc382a96c7a72b1c"
+mc_alias="ibm"
+mc_bucket="filepub"
+mc_filename="ddlc_pkg.zip"
+
+# DO NOT EDIT BELOW THIS LINE
 # This is intended for automating unzipping and putting the RPAs into the respect folder
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Installing Minio S3 Client"
+
+wget "https://dl.minio.io/client/mc/release/linux-amd64/mc" && \
+
+sudo cp -vR mc /usr/bin/mc && \
+
+mc config host add $mc_alias $mc_endpoint $mc_hmac_key $mc_hmac_secret && \
+
+# try if it works
+
+mc ls $mc_alias;
 
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Checking for dir if it exists"
-if [ -d "$cwd/mod" ]; then
-  # dir exists, just unzip, and make new dir to add files
-  echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory exists. Creating game/ subdir and copying files over."
-  wget -d --header="Authorization: $auth" https://s3-api.us-geo.objectstorage.softlayer.net/filepub/ddlc_pkg.zip 
-  mkdir -p "$cwd/mod/game"
-  unzip ddlc_pkg.zip -d  mod/game 
-   exit 0
+
+if [ -d "./mod" ]; then
+    # dir exists, just unzip, and make new dir to add files
+    echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory exists. Creating game/ subdir and copying files over."
+    mc cp "$mc_alias/$mc_bucket/$mc_filename" $mc_filename
+    mkdir -p "./mod/game"
+    unzip $mc_filename -d  mod/game 
+    exit 0
   else 
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory  does not exist. Creating dir and copying files over" 
     mkdir -p mod
-    wget -d --header="Authorization: $auth" https://s3-api.us-geo.objectstorage.softlayer.net/filepub/ddlc_pkg.zip 
-    mkdir -p "mod/game"
-    unzip ddlc_pkg.zip -d  mod/game    
+    mc cp "$mc_alias/$mc_bucket/$mc_filename"
+    mkdir -p "./mod/game"
+    unzip $mc_filename -d  mod/game    
     exit 0 
 fi
-
-
-createHMACSig() {
-
-}
