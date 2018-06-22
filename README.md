@@ -12,7 +12,8 @@ and worry less about releasing and packaging mods to upload it.
 
 Take a look at `.travis.yml` to let you know on how to build mods with it!
 
-Note: This only works on mods based on Template version 1.1.0! If you base your mod any lower than 1.1.0, this recipe won't work!
+We recommend using the `master` version of the Template to work until they release the no-script.rpa patch. Using released versions is known 
+to be untested and breaks the recipe.
 
 ## Copyright
 
