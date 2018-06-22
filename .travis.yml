@@ -24,7 +24,7 @@ install:
     
     - mkdir travis_mod
     
-    - cp -vRf quickstart-travis/sample_mod/* travis_mod/
+    - cp -vRf quickstart-travis/sample_mod/* ./
 
     - cd renpy
 
