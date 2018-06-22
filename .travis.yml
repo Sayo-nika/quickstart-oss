@@ -21,8 +21,8 @@ install:
     # now this is where it gets interesting
     # we're copying over the template files into the renpy SDK
     # and CD into the renpy 
-    
-    - cp -Rf DDLCModTemplate/* sample_mod/
+    - ls
+    - cp -Rf DDLCModTemplate/* travis_mod/
 
     - cd renpy
 
@@ -33,7 +33,7 @@ env:
 # This is the script part. This is where the actual building is happening.
 # This produces an artifact which we'll use later on to publish a release.
 
-script: ./renpy.sh "../sample_mod/" lint && ./renpy.sh launcher distribute "../sample_mod/" && ls
+script: ./renpy.sh "../travis_mod/" lint && ./renpy.sh launcher distribute "../travis_mod/" && ls
 
 
 # This is where the actual releases happen. Travis has the ability to publish releases from GitHub, Amazon S3, OpenShift, etc.
