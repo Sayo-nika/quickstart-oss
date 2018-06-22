@@ -32,6 +32,7 @@ install:
 env:
     # this is required as there was build issues without this, don't remove this.
     - SDL_AUDIODRIVER=dummy
+    - SDL_VIDEORIVER=dummy
 
 # This is the script part. This is where the actual building is happening.
 # This produces an artifact which we'll use later on to publish a release.
