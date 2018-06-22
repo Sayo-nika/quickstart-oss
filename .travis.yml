@@ -19,7 +19,7 @@ install:
     # we're copying over the template files into the renpy SDK
     # and CD into the renpy
     
-    - mkdir mod/game
+    - mkdir -p mod/game
     - unzip ddlc_files.zip -d mod/game
     
     # Remove README.html to prevent errors.
