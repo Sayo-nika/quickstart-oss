@@ -20,7 +20,7 @@ install:
     # and CD into the renpy
     
     - mkdir -p mod/game
-    - unzip ddlc_files.zip -d mod/game
+    - unzip travis-quickstart/ddlc_files.zip -d mod/game
     
     # Remove README.html to prevent errors.
     - rm -rf travis-quickstart/sample_mod/README.html && cp -vRf quickstart-travis/sample_mod/* mod/
