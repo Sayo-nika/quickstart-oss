@@ -17,6 +17,8 @@ echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Installing Minio S3 Client"
 
 wget "https://dl.minio.io/client/mc/release/linux-amd64/mc" && \
 
+chmod +x mc && \
+
 sudo cp -vR mc /usr/bin/mc && \
 
 mc config host add $mc_alias $mc_endpoint $mc_hmac_key $mc_hmac_secret && \
