@@ -1,9 +1,9 @@
-# Travis build script for RenPy
-# based on Monika-After-Story script.
-
 language: python
 python:
     - "2.7"
+    
+# Travis build script for RenPy
+# based on Monika-After-Story script.
 
 addons:
   artifacts: true
