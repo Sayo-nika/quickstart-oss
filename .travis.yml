@@ -50,5 +50,5 @@ deploy:
      - *.tar.bz2
      - *.zip
   skip_cleanup: true
-  on:
-    tags: true # keep in mind of this one! This is a conditional release build! This one only uploads releases git tagged.
+     on:
+       tags: true # keep in mind of this one! This is a conditional release build! This one only uploads releases git tagged.
