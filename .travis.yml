@@ -26,7 +26,7 @@ install:
     # Remove README.html to prevent errors.
     - rm -rf travis-quickstart/sample_mod/README.html && cp -vRf quickstart-travis/sample_mod/* mod/
     
-    - mkdir launcher
+    - cd renpy
 
 
 env:
@@ -36,7 +36,7 @@ env:
 # This is the script part. This is where the actual building is happening.
 # This produces an artifact which we'll use later on to publish a release.
 
-script: renpy/renpy.sh "mod/" lint && renpy/renpy.sh --compile "mod/" --savedir ./  && ls "$TRAVIS_HOME/build"
+script:./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && ls "$TRAVIS_HOME/build"
 
 
 # This is where the actual releases happen. Travis has the ability to publish releases from GitHub, Amazon S3, OpenShift, etc.
