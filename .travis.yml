@@ -23,7 +23,7 @@ install:
     - mkdir mod
     - unzip mas.zip -d mod
     
-    - cp -vRf quickstart-travis/sample_mod/* mod/*
+    - /bin/cp -vRf quickstart-travis/sample_mod/* mod/*
 
 
 env:
