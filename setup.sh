@@ -1,6 +1,8 @@
 #!/bin/bash
 
+# oh you can't abuse this key to POST stuff. It's only for read lul
 apikey = "6djJX9_ubYUj9aBpLggykL8kdnqmaiwdY8efJZuzqFGN"
+cwd = "$HOME/build/"
 
 # This is intended for automating unzipping and putting the RPAs into the respect folder
 
