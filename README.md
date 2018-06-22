@@ -12,10 +12,11 @@ and worry less about releasing and packaging mods to upload it.
 
 Take a look at `.travis.yml` to let you know on how to build mods with it!
 
+Note: This only works on mods based on Template version 1.1.0! If you base your mod any lower than 1.1.0, this recipe won't work!
+
 ## Copyright
 
 The travis build script has been modified for use from Monika After Story repository. All rights reserved.
 
-We used the amazing [Doki Doki: The Angel Returns](https://github.com/TheAngelReturns/the-angel-returns) mod as our sample mod. Shoutout to their amazing devs.
-
+We used the amazing [DDLC Mod Template](https://github.com/Monika-After-Story/DDLCModTemplate) mod as our sample mod. 
 
