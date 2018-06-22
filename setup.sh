@@ -32,14 +32,14 @@ echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Checking for dir if it exists"
 if [ -d "./mod" ]; then
     # dir exists, just unzip, and make new dir to add files
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory exists. Creating game/ subdir and copying files over."
-    mc cp "$mc_alias/$mc_bucket/$mc_filename" $mc_filename
+    mc cp "$mc_alias/$mc_bucket/$mc_filename" ./
     mkdir -p "./mod/game"
     unzip $mc_filename -d  mod/game 
     exit 0
   else 
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Directory  does not exist. Creating dir and copying files over" 
     mkdir -p mod
-    mc cp "$mc_alias/$mc_bucket/$mc_filename"
+    mc cp "$mc_alias/$mc_bucket/$mc_filename" ./
     mkdir -p "./mod/game"
     unzip $mc_filename -d  mod/game    
     exit 0 
