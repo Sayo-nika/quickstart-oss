@@ -46,9 +46,9 @@ deploy:
   api_key:
     secure: $GITHUB_API_KEY
   file: 
-     - *.zsync
-     - *.tar.bz2
-     - *.zip
+     - "*.zsync"
+     - "*.tar.bz2"
+     - "*.zip"
   skip_cleanup: true
-     on:
-       tags: true # keep in mind of this one! This is a conditional release build! This one only uploads releases git tagged.
+  on:
+    tags: true # your mods only builds on a GitHub Git tag so make sure you tag and release accordingly!
