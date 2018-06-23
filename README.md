@@ -12,7 +12,7 @@ and worry less about releasing and packaging mods to upload it.
 
 Take a look at `.travis.yml` to let you know on how to build mods with it!
 
-We recommend using the `master` version of the Template to work until they release the no-script.rpa patch. Using released versions is known 
+We recommend using the `master` version of the Template or Version 1.1.0 to work until they release the no-script.rpa patch. Using released versions is known 
 to be untested and breaks the recipe.
 
 ## Copyright
