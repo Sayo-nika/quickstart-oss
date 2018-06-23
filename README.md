@@ -20,3 +20,4 @@ to be untested and breaks the recipe.
 The travis build script has been modified for use from Monika After Story repository. All rights reserved.
 
 We used the amazing [DDLC Mod Template](https://github.com/Monika-After-Story/DDLCModTemplate) mod as our sample mod. 
+
