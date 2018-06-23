@@ -48,9 +48,8 @@ deploy:
   api_key:
     secure: $GITHUB_API_KEY
   file: 
-     - "*.zsync"
-     - "*.tar.bz2"
-     - "*.zip"
+     - "********-*.*.*-dists/********-*.*.*.tar.bz2"
+     - "********-*.*.*-dists/********-*.*.*.zip"
   skip_cleanup: true
   on:
     tags: true # your mods only builds and uploads releases on a GitHub Git tag so make sure you tag and release accordingly!
