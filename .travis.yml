@@ -48,7 +48,7 @@ deploy:
   api_key:
     secure: $GITHUB_API_KEY
   file: 
-     - "********-*.*.*-dists/*"
+     - "$TRAVIS_HOME/********-*.*.*-dists/*"
   skip_cleanup: true
   on:
     tags: true # your mods only builds and uploads releases on a GitHub Git tag so make sure you tag and release accordingly!
