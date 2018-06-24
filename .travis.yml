@@ -46,7 +46,8 @@ script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" --
 deploy:
   provider: releases
   api_key:
-    # DO NOT CHANGE THIS! Travis can replace this since it's a Environment Variable. Head to Settings > Environment variables and set this.
+    # DO NOT CHANGE THIS! Travis can replace this since it's a Environment Variable.
+    # Head to Settings > Environment variables and set this.
     secure: $GITHUB_API_KEY
   file_glob: true
   file: "*-dists/**"
