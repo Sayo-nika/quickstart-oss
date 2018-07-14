@@ -1,4 +1,4 @@
-# quickstart-travis [![Build Status](https://travis-ci.org/Sayo-nika/quickstart-travis.svg?branch=master)](https://travis-ci.org/Sayo-nika/quickstart-travis)
+# quickstart-travis [![Build Status](https://travis-ci.org/Sayo-nika/quickstart-oss.svg?branch=master)](https://travis-ci.org/Sayo-nika/quickstart-travis)
 
 This is a CI template to get you started on automated builds on [Travis CI](https://travis-ci.org)
 
