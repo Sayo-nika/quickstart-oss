@@ -26,8 +26,6 @@ install:
     # Remove README.html to prevent errors.
     - rm -rf travis-quickstart/sample_mod/README.html && cp -vRf quickstart-oss/sample_mod/* mod/
     
-    - echo $TRAVIS_COMMIT
-    
     - bash quickstart-oss/travis/inject_version.sh
     
     
