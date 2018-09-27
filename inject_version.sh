@@ -6,3 +6,4 @@ if [ ! TRAVIS_TAG ]; then
 else
   sed -i "s/define config.version = \"0.1.2\"/define config.version = \"$TRAVIS_TAG\"/g" mod/game/options.rpy;
   cat mod/game/options.rpy | grep config.version;
+fi
