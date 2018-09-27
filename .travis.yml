@@ -28,7 +28,8 @@ install:
     
     - echo $TRAVIS_COMMIT
     
-    - sed -i "s/define config.version = \"0.1.2\"/define config.version = \"$TRAVIS_COMMIT\"/g" mod/game/options.rpy
+    - bash quickstart-oss/inject_version.sh
+    
     
     - cd renpy
 
