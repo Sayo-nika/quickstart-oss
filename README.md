@@ -24,7 +24,7 @@ To get `inject_version.sh` replace your `config.version` in `options.rpy` correc
   - Replace the value of `replacer` with your template value that you set in `options.rpy`.
 
 
-After that, you will also might need to write the `quickstart-oss/sample_mod` and `quickstart-oss/` paths into your own project paths. See how the folks in [The Angel Returns Mod](https://github.com/TheAngelReturns/the-angel-returns/tree/nightly) did it.
+After that, you will also might need to write the `quickstart-oss/sample_mod` and `quickstart-oss/` paths into your own project paths. See how the folks in [The Angel Returns Mod](https://github.com/TheAngelReturns/the-angel-returns/blob/nightly/.travis.yml) configured this template to work.
 
 ## Copyright
 
