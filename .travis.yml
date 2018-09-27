@@ -26,6 +26,10 @@ install:
     # Remove README.html to prevent errors.
     - rm -rf travis-quickstart/sample_mod/README.html && cp -vRf quickstart-oss/sample_mod/* mod/
     
+    - echo $TRAVIS_COMMIT
+    
+    - sed -i `s/define config.version = "0.1.2beta2"/define config.version = "$TRAVIS_COMMIT"/g` mod/game/options.rpy
+    
     - cd renpy
 
 
